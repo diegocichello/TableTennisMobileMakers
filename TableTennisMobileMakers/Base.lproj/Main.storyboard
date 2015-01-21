@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2i-bv-6zV" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Ld5-yK-Udx"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Zfz-Uv-18W"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="P2i-bv-6zV" secondAttribute="trailing" constant="-16" id="e0g-Im-2GU"/>
+                            <constraint firstItem="P2i-bv-6zV" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="umg-p1-bCT"/>
+                            <constraint firstItem="P2i-bv-6zV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="v53-jT-lXE"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="P2i-bv-6zV" secondAttribute="bottom" id="wm2-SK-T43"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="P2i-bv-6zV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="e0g-Im-2GU"/>
+                                <exclude reference="umg-p1-bCT"/>
+                                <exclude reference="v53-jT-lXE"/>
+                                <exclude reference="wm2-SK-T43"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="P2i-bv-6zV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="e0g-Im-2GU"/>
+                                <include reference="umg-p1-bCT"/>
+                                <include reference="v53-jT-lXE"/>
+                                <include reference="wm2-SK-T43"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="carousel" destination="P2i-bv-6zV" id="3OD-0o-lBZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
